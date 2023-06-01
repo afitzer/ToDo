@@ -1,3 +1,27 @@
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-block input[type="radio"] {
+    margin-right: 10px;
+}
+
+.task-name {
+    margin: 0;
+}
+
+.task-block input[type="radio"]:checked+.task-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
 /* main.css */
 
 body {

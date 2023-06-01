@@ -1,10 +1,13 @@
-{% extends "todo/base.html" %}
+{% extends 'todo/base.html' %}
 
 {% block content %}
-    <h2>Tasks</h2>
-        <ul>
-            {% for task in tasks %}
-                <li>{{ task.title }}</li>
-            {% endfor %}
-        </ul>
+<h2>Task List</h2>
+<ul class="task-list">
+    {% for task in tasks %}
+    <li class="task-block">
+        <input type="radio" name="task" id="task{{ forloop.counter }}" {% if task.completed %}checked{% endif %}>
+        <label for="task{{ forloop.counter }}" class="task-name">{{ task.title }}</label>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
