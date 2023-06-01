@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My To-Do App</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/main.css' %}">
+</head>
+
+<body>
+    <div>
+        <h1>My To-Do App</h1>
+        <hr>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
